@@ -190,12 +190,12 @@ public class JSAccessor extends JavaScript {
         if (MoMLParser.getIconLoader() == null) {
             MoMLParser.setIconLoader(new AccessorIconLoader());
         }
-        try {
-            JSAccessor.createSymbolicLinks();
-        } catch (IOException exception) {
-            System.out.println("JSAccessor: Could not create symbolic links.");
-            exception.printStackTrace();
-        }
+//        try {
+//            JSAccessor.createSymbolicLinks();
+//        } catch (IOException exception) {
+//            System.out.println("JSAccessor: Could not create symbolic links.");
+//            exception.printStackTrace();
+//        }
     }
 
     ///////////////////////////////////////////////////////////////////

@@ -1,16 +1,65 @@
-This is the Ptolemy II README.md File
+# Ptolemy II MSI Installer for Windows
 
-Ptolemy II consists of a group of Java packages that support
-heterogeneous concurrent modeling and design.   
+**Ptolemy II** is a software framework developed at [UC Berkeley](https://ptolemy.berkeley.edu/ptolemyII/ptIIlatest/doc/index.htm) for modeling and simulating complex, heterogeneous systems, particularly those involving concurrency and real-time behavior. It is based on the principles of **actor-oriented design**.
 
-The Ptolemy II documentation can be found in $PTII/doc/index.htm or [http://ptolemy.berkeley.edu/ptolemyII/ptIIlatest/doc/index.htm](http://ptolemy.berkeley.edu/ptolemyII/ptIIlatest/doc/index.htm)
+I personally enjoy working with Ptolemy II and use it extensively during my modeling and simulation classes.
 
-* To develop Ptolemy II code, we recommend that you follow the
-[Ptolemy II Eclipse Instructions located in $PTII/doc/eclipse/index.htm or [https://ptolemy.berkeley.edu/ptolemyII/ptIIlatest/doc/eclipse/index.htm](https://ptolemy.berkeley.edu/ptolemyII/ptIIlatest/doc/eclipse/index.htm)
-* To build from the command line, see $PTII/doc/install_index.htm or [https://www.icyphy.org/ptII/](https://www.icyphy.org/ptII/)
+This repository is a **fork of the official [Ptolemy II repository](https://github.com/icyphy/ptII)**, with the goal of creating and sharing a **modern Windows MSI installer** that leverages newer versions of Java. The codebase remains unchanged, with a few minimal adjustments described below.
 
-* [Main Ptolemy II website](http://ptolemy.berkeley.edu/ptolemyII)
-* [Contributing](CONTRIBUTING.md)
-* [Downloads and Travis Logs](https://icyphy.github.io/ptII/)
-* [Wiki page for Ptolemy II Travis instance](https://wiki.eecs.berkeley.edu/ptexternal/Main/Travis)
-* [![Build Status](https://travis-ci.org/icyphy/ptII.svg?branch=master)](https://travis-ci.org/icyphy/ptII)
+> ✅ **Download the Installer**:  
+> 👉 [PtolemyII-11.1.msi](./installer/PtolemyII-11.1.msi)
+
+---
+
+## 🔧 How the Installer Was Created
+
+### 1. Prerequisites Installed
+
+- Installed [Adoptium Temurin JDK 21](https://adoptium.net/temurin/releases/?os=any&arch=any&version=21)
+- Installed the latest version of Eclipse IDE
+- Forked and cloned the official [Ptolemy II GitHub repository](https://github.com/icyphy/ptII)
+
+### 2. Eclipse Setup
+
+Followed steps 3–5 from the Ptolemy II Eclipse setup guide:  
+📖 [Setting up Ptolemy II and Eclipse (Windows)](https://ptolemy.berkeley.edu/ptolemyII/ptIIlatest/doc/eclipse/windows/index.htm)
+
+### 3. Minor Code Adjustments
+
+- **Added `module-info.java`** to enable Swing modules:
+    ```java
+    module ptII {
+        requires java.desktop;
+    }
+    ```
+
+- **Enabled Nimbus Swing Look & Feel** in `MoMLApplication.java`:
+    ```java
+    UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+    ```
+
+### 4. Packaged Application
+
+- Used Eclipse to create a **fat (uber) JAR** with `ptolemy.vergil.VergilApplication` as the main class
+
+### 5. WiX Toolset Installation
+
+- Installed [WiX Toolset v3.14.1](https://github.com/wixtoolset/wix3/releases) to enable MSI packaging
+
+### 6. Built the Installer with `jpackage`
+
+```bash
+jpackage ^
+  --type msi ^
+  --name "PtolemyII" ^
+  --input installer/app ^
+  --main-jar ptII.jar ^
+  --main-class ptolemy.vergil.VergilApplication ^
+  --icon installer/icon/ptiny.ico ^
+  --win-shortcut ^
+  --win-menu ^
+  --win-dir-chooser ^
+  --win-menu-group "Ptolemy II" ^
+  --app-version 11.1 ^
+  --copyright "Copyright (c) 1995-2021 The Regents of the University of California" ^
+  --description "Ptolemy II is an open-source software framework supporting experimentation with actor-oriented design"

@@ -126,8 +126,9 @@ public class MoMLApplication extends ConfigurationApplication {
                         + " because it causes problems under applets under "
                         + "Java 1.6.0_02 through 1.6.0_13.");
             } else {
-                UIManager.setLookAndFeel(
-                        UIManager.getSystemLookAndFeelClassName());
+//                UIManager.setLookAndFeel(
+//                        UIManager.getSystemLookAndFeelClassName());
+                UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
             }
         } catch (Throwable throwable) {
             // Ignore exceptions, which only result in the wrong look and feel.
