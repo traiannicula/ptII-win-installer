@@ -7,7 +7,7 @@ I personally enjoy working with Ptolemy II and use it extensively during my mode
 This repository is a **fork of the official [Ptolemy II repository](https://github.com/icyphy/ptII)**, with the goal of creating and sharing a **modern Windows MSI installer** that leverages newer versions of Java. The codebase remains unchanged, with a few minimal adjustments described below.
 
 > ✅ **Download the Installer**:  
-> 👉 [PtolemyII-11.1.msi](assets/PtolemyII-11.1.msi)
+> 👉 [PtolemyII-11.1.msi](releases/download/v1.0.0/PtolemyII-11.1.msi)
 
 ---
 
