@@ -1,8 +1,0 @@
-<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
-    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Patrick Lazik, Contributor: Edward A. Lee">
-    </property>
-    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor reads sensor and location data from a location host&lt;/p&gt;&#10; &lt;p&gt; The accessor makes REST GET requests to a location host to&#10; obtain sensor and location data. The type of data requested is&#10; defined by the dataType parameter. Possible values for the&#10; dataType parameter are:&lt;/p&gt;&#10; &lt;ul&gt;&#10;  &lt;li&gt;&amp;quot;ibeacon&amp;quot;: Fetches region UUID, major, minor, range, proximity and RSSI values of&#10;  nearby iBeacons.&lt;/li&gt;&#10;  &lt;li&gt;&amp;quot;alps&amp;quot;: Fetches ALPS region ID, transmitter IDs, TOA and RSSI values of nearby ALPS&#10;  transmitters.&lt;/li&gt;&#10;  &lt;li&gt;&amp;quot;imu&amp;quot;: Fetches pedometer and heading values.&lt;/li&gt;&#10;  &lt;li&gt;&amp;quot;wifi&amp;quot;: Fetches SSIDs, BSSIDs and RSSI values from nearby WiFi hotspots.&lt;/li&gt;&#10;  &lt;li&gt;&amp;quot;all&amp;quot;: Fetches all of the above data at once&lt;/li&gt;&#10;&lt;/ul&gt;&#10;&#10;&lt;p&gt; All outputs are JSON formatted and contain UNIX timestamps of when the data was&#10;acquired by the location host.&lt;/p&gt;">
-    </property>
-    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
-    </property>
-</property>

@@ -1,8 +1,0 @@
-<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
-    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Edward A. Lee">
-    </property>
-    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Test inheritance (this.extend() function and overrides).&#10; This modifies the base class so that on the &apos;jsonOfUntyped&apos; output it produces&#10; the string &apos;hello&apos;, a string defined in a variable defined in the base class.&#10; This tests the ability to access variables defined in the base class and the&#10; ability to override functions defined and used in the base class.&lt;/p&gt;">
-    </property>
-    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
-    </property>
-</property>

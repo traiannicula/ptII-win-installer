@@ -1,6 +1,0 @@
-<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
-    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Ilya Y. Rostovtsev">
-    </property>
-    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
-    </property>
-</property>

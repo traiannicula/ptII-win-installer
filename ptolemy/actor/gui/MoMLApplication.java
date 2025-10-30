@@ -128,6 +128,7 @@ public class MoMLApplication extends ConfigurationApplication {
             } else {
 //                UIManager.setLookAndFeel(
 //                        UIManager.getSystemLookAndFeelClassName());
+                
                 UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
             }
         } catch (Throwable throwable) {

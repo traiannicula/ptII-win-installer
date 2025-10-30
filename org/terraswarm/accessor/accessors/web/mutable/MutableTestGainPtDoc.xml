@@ -1,8 +1,0 @@
-<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
-    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Chadlia Jerad">
-    </property>
-    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Test mutableAccessor that describes the realized feature and the interface&#10; of an accessor that multiplies its input by a scale factor.&lt;/p&gt;">
-    </property>
-    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id: MutableTestGain.js ??? 2017-02-10 10:10Z chx$$">
-    </property>
-</property>
