@@ -1,0 +1,12 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Christopher Brooks">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Display an image on the console.&#10; The image is passed through to the output in case a model wishes to ensure&#10; that the image has been displayed before something else happens.&lt;/p&gt;">
+    </property>
+    <property name="input (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The image to display.">
+    </property>
+    <property name="output (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The image to display.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

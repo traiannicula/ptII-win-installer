@@ -1,0 +1,16 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Sajjad Taheri (CV code), Elizabeth Osyk (accessorization)">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;A computer vision accessor.  This accessor takes an input image, applies&#10; a computer vision transformation, and outputs the modified image.&lt;/p&gt;&#10;&lt;p&gt; Try me!  For &apos;input&apos;, enter &#10; &lt;code&gt;/accessors/hosts/browser/demo/computerVision/terraswarm.jpg&lt;/code&gt;&#10; then click &apos;react to inputs&apos;.&lt;/p&gt;&#10;&lt;p&gt; The input may be an image or a path to a local image.  Remote images are not&#10; supported due to browser security restrictions - a browser will not allow&#10; a remote image to be exported from a canvas.&lt;/p&gt;&#10;&lt;p&gt; This accessor uses the computer vision library from UC Irvine,&#10; https://github.com/ucisysarch/opencvjs&#10; Please see cvlicense.txt in /accessor/web/hosts/browser/modules/cvlicense.txt,&#10; available as &lt;a href=&quot;http://accessors.org/hosts/browser/modules/cvlicense.txt&quot;&gt;http://accessors.org/hosts/browser/modules/cvlicense.txt&lt;/a&gt;.&lt;/p&gt;&#10;&lt;p&gt; To run, please point your browser to:&#10; &lt;a href=&quot;http://accessors.org/node_modules/@accessors-hosts/browser/demo/computerVision/computerVision.html&quot;&gt;http://accessors.org/node_modules/@accessors-hosts/browser/demo/computerVision/computerVision.html&lt;/a&gt;&lt;/p&gt;">
+    </property>
+    <property name="input (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="(string or image) An image or path to a local image.  Remote&#10; images are not supported due to browser security restrictions - a browser&#10; will not allow a remote image to be exported from a canvas.">
+    </property>
+    <property name="output (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="(image) A modified image.">
+    </property>
+    <property name="options (parameter)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="(JSON) Options for the selected transform, if any.">
+    </property>
+    <property name="transform (parameter)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="(string) The transform to apply to the image.  Selected&#10;  from a list.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

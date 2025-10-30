@@ -1,0 +1,12 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Elizabeth Latronico (beth@berkeley.edu), based on IPAddress actor&#10; by Christopher Brooks">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor outputs the IP address of the local machine.&lt;/p&gt;">
+    </property>
+    <property name="trigger (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="Send a token here to produce an output.">
+    </property>
+    <property name="IPAddress (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The IP address of the local machine.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

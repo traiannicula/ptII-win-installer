@@ -1,0 +1,18 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Edward A. Lee">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;A motion detector accessor.&#10; This accessor compares each input image against the previous&#10; input image. There are three outputs.&#10; The one named &apos;output&apos; is a modified image that graphically illustrates&#10; the center of gravity of motion, if motion is detected.&#10; If enough of the pixels differ by enough, then the &apos;cog&apos;&#10; output will produce the center of gravity of the pixels that&#10; differ by enough.&#10; Finally, the &apos;area&apos; output produces the percentage of area&#10; covered by motion in the input image, where 0 means no motion&#10; and 100 means full image motion.&lt;/p&gt;&#10;&lt;p&gt; The options parameter can include the following fields:&lt;/p&gt;&#10;&lt;ul&gt;&#10;&lt;li&gt;&lt;em&gt;PixelThreshold&lt;/em&gt;: Intensity threshold whereby a pixel is&#10;deemed to different (an int in the range of 0 to 255, with default 25).&lt;/li&gt;&#10;&lt;li&gt;&lt;em&gt;AreaThreshold&lt;/em&gt;: The percentage threshold of image&#10;that has different pixels for motion to be detected&#10;(a double 0-100, with default 0.2).&lt;/li&gt;&#10;&lt;li&gt;&lt;p&gt;&lt;em&gt;ModifyImage&lt;/em&gt;: If true (the default), the modify the&#10;provided image with a visual indication of the location&#10;and amount of motion.&lt;/p&gt;&#10;&lt;p&gt;The implementation for the Ptolemy II host is taken from&#10;the webcam-capture package by Bartosz Firyn (SarXos), available from&#10;&lt;a href=&quot;https://github.com/sarxos/webcam-capture&quot;&gt;https://github.com/sarxos/webcam-capture&lt;/a&gt;.&#10;The webcam-capture package is licensed under the MIT License.&lt;/p&gt;&#10;&lt;/li&gt;&#10;&lt;/ul&gt;">
+    </property>
+    <property name="input (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="A stream of images.">
+    </property>
+    <property name="options (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The options controlling the filter.">
+    </property>
+    <property name="cog (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The horizontal and vertical position of the center of gravity of motion, in pixels.">
+    </property>
+    <property name="output (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The filtered image.">
+    </property>
+    <property name="area (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The percentage of area covered by motion.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

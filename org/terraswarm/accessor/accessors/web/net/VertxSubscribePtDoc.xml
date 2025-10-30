@@ -1,0 +1,18 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Patricia Derler, Edward A. Lee, Ben Zhang">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor subscribes to a Vert.x event bus, which is a peer-to-peer&#10; publish-and-subscribe system. This accessor will receive data that is&#10; sent by any subscriber that publishes to the same address and runs in&#10; the same Vertx cluster (see the VertxPublish accessor).&#10; The Vertx cluster normally includes all machines that hear multicast&#10; packets sent by the machine hosting this accessor.&lt;/p&gt;&#10;&lt;p&gt; The output produced by this accessor may be any data type supported by&#10; accessors that has a string representation in JSON syntax.&#10; The data sent by a VertxPublish accessor is first converted to a string&#10; in JSON format and sent to the event bus. This VertxSubscribe accessor&#10; will parse that string and output the data in the native format of its host.&lt;/p&gt;&#10;&lt;p&gt; If the reply input is set to a non-empty value, then whenever this accessor&#10; receives a point-to-point message from the event bus (see VertxPublish),&#10; then it will reply with the specified message, acknowledging receipt.&#10; The reply can also be any data type that has a JSON string representation.&lt;/p&gt;&#10;&lt;p&gt; The busHost input specifies the name of the network interface through&#10; which to connect to the Vert.x event bus cluster, and busHostPort specifies&#10; the port to use for this. Normally, you can leave these at their default&#10; values unless you need to need to use a network interface that is not&#10; &apos;localhost&apos; or you need to use a particular port.&#10; These two inputs are examined only at initialization time,&#10; so changing them during execution of a swarmlet will have no effect.&lt;/p&gt;">
+    </property>
+    <property name="address (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The event bus address, which is the name of the event stream&#10;  to which to subscribe. This defaults to &apos;topic&apos;.">
+    </property>
+    <property name="reply (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The reply to send back to the sender for point-to-point messages,&#10;  or empty to send no reply (the default).">
+    </property>
+    <property name="message (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The message received.">
+    </property>
+    <property name="busHost (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The name of the network interface to use for the Vert.x&#10;  event bus. A blank string is interpreted as &apos;localhost&apos; (the default).">
+    </property>
+    <property name="busHostPort (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The port for the Vert.x event bus. A value of 0&#10;  indicates to just find an available port (the default).">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

@@ -1,0 +1,12 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Brad Campbell">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Publish location X,Y,Z coordinates as a PointCloud to a ROS topic.&lt;/p&gt;&#10;&lt;p&gt; Incoming packets should have at least these keys:&#10;    {&#10;      X: &lt;x coordinate&gt;,&#10;      Y: &lt;y coordinate&gt;,&#10;      id: &lt;unique id for this location&gt;&#10;    }&lt;/p&gt;&#10;&lt;p&gt; All locations are published as a PointCloud so that the ROS visualization&#10; only needs to subscribe to one topic.&lt;/p&gt;">
+    </property>
+    <property name="topic (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The ROS topic to publish to.">
+    </property>
+    <property name="frame_id (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The frame_id of the header (only needed if a header is required).">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

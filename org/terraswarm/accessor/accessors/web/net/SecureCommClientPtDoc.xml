@@ -1,0 +1,40 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor is used for accessing authorization service provided by&#10; a local authorization entity, Auth (https://github.com/iotauth/iotauth),&#10; and for secure communication with a SecureCommserver.&lt;/p&gt;&#10;&lt;p&gt; Specifically, this accessor establishes a secure communication with server&#10; using session keys (symmetric cryptographic keys) and sends/receives&#10; messages to/from the server. To obtain session keys, this accessor also&#10; communicates with the local authorization entity, Auth.&lt;/p&gt;&#10;&lt;p&gt; This accessor internally manages the credentials (cryptographic keys)&#10; for communication with remote Auth and remote server.&#10; All the messages to/from remote Auth and server are protected using&#10; the credentials, while input/output data of this accessor is in plain text.&lt;/p&gt;&#10;&lt;p&gt; This accessor requires the &apos;iotAuth&apos;, and &apos;dataConverter&apos; modules.&lt;/p&gt;">
+    </property>
+    <property name="serverHostPort (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Information of the destination server. This input triggers&#10;  a secure connection with a server (possibly using the SecureCommServer accessor).&#10;  This input is specified as a JSON with two properties, &apos;host&apos; and &apos;port&apos;. The property&#10;  &apos;host&apos; specifies the IP address or domain name of server in string and &apos;port&apos; specifies&#10;  the port number in integer. If a session key for communicating with a server is not&#10;  available, the SecureCommClient communicates with Auth to request the session key(s)&#10;  for secure communication, before establishing a secure connection with the server.">
+    </property>
+    <property name="toSend (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The data to be sent over the secure connection with the server.">
+    </property>
+    <property name="connected (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="Output `true` on connected and `false` on disconnected with&#10;  the server over a secure connection.">
+    </property>
+    <property name="received (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The data received from the server over a secure connection.">
+    </property>
+    <property name="clientName (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The client&apos;s unique name in string.">
+    </property>
+    <property name="authHost (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="Auth&apos;s IP address or domain name.">
+    </property>
+    <property name="authPort (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="Auth&apos;s port number.">
+    </property>
+    <property name="authCertPath (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The path for the X.509 certificate file (in pem format)&#10;  of Auth with which the client is registered.">
+    </property>
+    <property name="clientPrivateKeyPath (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The path for the pem format private key of&#10;  the client.">
+    </property>
+    <property name="publicKeyCryptoSpec (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The specification for the public cryptography&#10;  algorithms to be used for communication with Auth">
+    </property>
+    <property name="distributionCryptoSpec (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The specification for the symmetric cryptography&#10;  algorithms to be used for communication with Auth">
+    </property>
+    <property name="sessionCryptoSpec (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The specification for the symmetric cryptography&#10;  algorithms to be used for communication with the server">
+    </property>
+    <property name="numKeysPerRequest (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The number of session keys to be requested per&#10;  session key request to Auth">
+    </property>
+    <property name="targetServerGroup (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The communication policy group to which the&#10;  target server belong.">
+    </property>
+    <property name="receiveType (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="Data type of the received data from server.">
+    </property>
+    <property name="sendType (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="Data type of the sent data to server.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

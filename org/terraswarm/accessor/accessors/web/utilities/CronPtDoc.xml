@@ -1,0 +1,20 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Edward A. Lee">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Accessor that spontaneously produces outputs at specified times of day.&#10; This implementation produces a counting sequence, so each output will have&#10; a value one greater than the previous value. The default parameters will&#10; produce an output at the zeroth minute of every hour on any day of the month&#10; and any day of the week.&lt;/p&gt;">
+    </property>
+    <property name="minute (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The minutes past the hour or &quot;*&quot; to output once per minute. This has value 0 to 59 and defaults to 0.">
+    </property>
+    <property name="hour (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The hour (0 to 23) or &quot;*&quot; to output once per hour.">
+    </property>
+    <property name="date (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The day of the month (0 to 31) or &quot;*&quot;&quot; to output on any day of the month.">
+    </property>
+    <property name="month (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The month (0 to 11) or &quot;*&quot; to output on any month.">
+    </property>
+    <property name="day (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The day of the week (0 to 6, where 0 is Sunday) or &quot;*&quot; to output on any day of the week.">
+    </property>
+    <property name="output (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Output for the the counting sequence, of type number.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

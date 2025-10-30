@@ -1,0 +1,8 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Edward A. Lee">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Simple derived accessor that just overrides a local field in the exports object.&#10; It sets exports.baseField to value 2. In reaction to an input, it should produce&#10; an output value of 2.&lt;/p&gt;">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

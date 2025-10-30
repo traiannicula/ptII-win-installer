@@ -1,0 +1,6 @@
+#!/bin/bash
+mkdir $1
+mkdir $1/src
+cp .build.xml $1/build.xml
+cp .README.txt $1/README.txt
+cd $1 && ant create

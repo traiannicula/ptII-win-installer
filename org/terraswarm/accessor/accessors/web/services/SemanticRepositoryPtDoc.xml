@@ -1,0 +1,20 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Matt Weber">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Perform a SPARQL query on a semantic repository such as GraphDB.&lt;/p&gt;&#10;&lt;p&gt; SPARQL is a W3C standard for querying semantic repositories,&#10; playing an analogous role to SQL with respect to relational&#10; databases. Semantic repositories fall within the domain of knowledge&#10; representation in AI and typically are implemented as a triplestore:&#10; entries in the repository have the form &amp;quot;subject&amp;quot;, &amp;quot;predicate&amp;quot;, &amp;quot;object&amp;quot;&#10; eg. &amp;quot;An Apple&amp;quot; &amp;quot;IsA&amp;quot; &amp;quot;Fruit&amp;quot;&lt;/p&gt;&#10;&lt;p&gt; An example SPARQL query to get a list of up to 100 triples in the repository:&lt;/p&gt;&#10;&lt;p&gt; select * where { &#10;     ?s ?p ?o .&#10; } limit 100&lt;/p&gt;&#10;&lt;p&gt; Documentation for SPARQL and the SPARQL Protocol can be found at&#10; https://&lt;a href=&quot;http://www.w3.org/TR/rdf-sparql-query/&quot;&gt;www.w3.org/TR/rdf-sparql-query/&lt;/a&gt;&lt;/p&gt;&#10;&lt;p&gt; Information on GraphDB can be found at&#10; http://graphdb.ontotext.com/&lt;/p&gt;&#10;&lt;p&gt; SPARQL is also a protocol for communicating with RDF databases&#10; Upon receiving a query input, this accessor performs an http GET&#10; to the specified server and port with the querystring &amp;quot;query&amp;quot; set to the&#10; query input. The JSON response from the semantic repository (if any) is &#10; sent to the response output. Depending on the query type, the &#10; response will be JSON &lt;/p&gt;&#10;&lt;p&gt; This accessor does not block waiting for the response, but if any additional&#10; &lt;em&gt;query&lt;/em&gt; input is received before a pending request has received a response&#10; or timed out, then the new request will be queued and sent out only after&#10; the pending request has completed. This strategy ensures that outputs are&#10; produced in the same order as the input requests.&lt;/p&gt;">
+    </property>
+    <property name="query (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The SPARQL query to be sent to the semantic repository.&#10;  Types of queries yielding a response are: SELECT, CONSTRUCT, ASK, and DESCRIBE">
+    </property>
+    <property name="response (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="An object containing the raw response from the service conforming&#10;  to the SPARQL protocol. If the query type was SELECT or ASK the response will be&#10;  JSON &quot;sparql-results&quot;. If the query type was CONSTRUCT or DESCRIBE the response&#10;  will be JSON &quot;rdf&quot;.">
+    </property>
+    <property name="host (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The URL for the semantic repository.">
+    </property>
+    <property name="port (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The port for the semantic repository.">
+    </property>
+    <property name="repositoryName (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The name of the particular repository on the host.">
+    </property>
+    <property name="timeout (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The amount of time (in milliseconds) to wait for a response&#10;  before triggering a null response and an error. This defaults to 20000.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id: SemanticRepository.js 1725 2017-05-19 22:59:11Z cxh $$">
+    </property>
+</property>

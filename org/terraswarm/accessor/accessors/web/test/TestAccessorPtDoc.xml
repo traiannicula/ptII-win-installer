@@ -1,0 +1,24 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Edward A. Lee">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Test accessor with various input and output types and handlers.&#10; This accessor is designed to be instantiable on any host, including&#10; the common host, which does not implement the require() function&#10; nor provide any mechanism for loading accessors.&lt;/p&gt;">
+    </property>
+    <property name="untyped (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="An untyped input that will accept any JavaScript object.">
+    </property>
+    <property name="numeric (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="A numeric input.">
+    </property>
+    <property name="boolean (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="A boolean input.">
+    </property>
+    <property name="typeOfUntyped (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Produces the type (a string) of the input named &apos;untyped&apos;.">
+    </property>
+    <property name="jsonOfUntyped (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Produces a JSON representation of the input named &apos;untyped&apos;,&#10;  created using JSON.toString().">
+    </property>
+    <property name="numericPlusP (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Produces the value of the &apos;numeric&apos; input plus &apos;p&apos;.">
+    </property>
+    <property name="negation (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Produces the negation of the &apos;boolean&apos; input.">
+    </property>
+    <property name="p (parameter)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="A parameter with default value 42.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

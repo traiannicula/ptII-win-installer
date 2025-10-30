@@ -1,0 +1,14 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Armin Wasicek (arminw@berkeley.edu)">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Exec starts a shell command and connects to the process&apos; stdin and stdout.&#10;This accessor implements an interface to the shell of the host. It takes a&#10;command and starts it as a process. It connects the process&apos; stdin and&#10;stdout to the accessor ports with the same name.&#10;FIXME: Provide a selection of shells (e.g., bash, awk, etc)&lt;/p&gt;">
+    </property>
+    <property name="stdin (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The stdin of the executing process. A token received on this&#10;       port is interpreted as a line entered in stdin of the process.">
+    </property>
+    <property name="stdout (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The stdout of the executing process. Each line read from the&#10;       executing process is sent out as a token from this port.">
+    </property>
+    <property name="command (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The command to be executed.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

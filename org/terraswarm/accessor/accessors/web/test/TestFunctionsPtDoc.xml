@@ -1,0 +1,14 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Edward A. Lee">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Test top-level functions provided by the host.&lt;/p&gt;">
+    </property>
+    <property name="getResource (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Outputs the contents of index.html if the host implements&#10;  this.getResource() and can serve contents given &apos;index.html&apos; as the URI.">
+    </property>
+    <property name="httpRequest (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Outputs the contents of index.html if the host implements&#10;  httpRequest() and can serve contents given &apos;index.html&apos; as the URL.">
+    </property>
+    <property name="readURL (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Outputs the contents of index.html if the host implements&#10;  readURL() and can serve contents given &apos;index.html&apos; as the URL.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

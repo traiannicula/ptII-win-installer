@@ -1,0 +1,14 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Elizabeth Osyk">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Speech recognition accessor.  This accessor opens an audio channel, listens&#10;for speech, then returns text.&lt;/p&gt;">
+    </property>
+    <property name="start (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Start listening for speech.">
+    </property>
+    <property name="stop (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Stop listening for speech.">
+    </property>
+    <property name="text (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The text of any detected speech.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

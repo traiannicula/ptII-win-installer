@@ -1,0 +1,36 @@
+
+.chart {
+  overflow: hidden;
+  padding-top: 0px;
+}
+
+.container {
+	height: 330px;
+	width: 750px;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#section1 {
+	height: 330px;
+	width: 400px;
+	float: left;
+}
+
+#section2 {
+	height: 330px;
+	width: 340px;
+	float: left;
+}
+
+.title {
+	text-align: center;
+	font-size: 0.8em;
+	font-weight: bold;
+	padding-bottom: 0px;
+}
+

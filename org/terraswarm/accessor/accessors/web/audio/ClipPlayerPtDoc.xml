@@ -1,0 +1,14 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Elizabeth Osyk (beth@berkeley.edu)">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;An accessor for playing a sound clip from a URL or a resource on the&#10; local host. The URL or resource name can be provided as a parameter or&#10; as an input. To start playing the sound, an event must be provided to the&#10; start input. An event at the stop input, or a new event at the start input,&#10; will cause the sound to stop playing.&lt;/p&gt;">
+    </property>
+    <property name="start (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="A trigger input to start playback.&#10;  The value is ignored and can be anything.">
+    </property>
+    <property name="stop (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="A trigger to stop playback.&#10;  The value is ignored and can be anything.">
+    </property>
+    <property name="clipURL (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The URL to retrieve the sound clip from.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

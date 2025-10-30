@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Accessor Tutorial</title>
+	
+	<link rel="stylesheet" href="/accessors/hosts/browser/demo/tutorial/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="/accessors/hosts/browser/demo/tutorial/codemirror/addon/lint/lint.css">
+	<link rel="stylesheet" href="/accessors/hosts/browser/accessorStyle.css">
+	
+	<script src="/accessors/hosts/browser/demo/tutorial/codemirror/lib/codemirror.js"></script>
+	<script src="/accessors/hosts/browser/demo/tutorial/codemirror/mode/javascript/javascript.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="tutorial.css">
+	
+	<script src="/accessors/hosts/browser/browser.js"> </script>
+	<script src="observer.js"> </script>
+	<script src="tutorial.js"> </script>
+</head>
+
+<body>	
+<div class="menu" id="menuDiv">
+	<table id="menuTable"> 
+		<tr> 
+			<td> <a href="tutorial.html">  Hello World </a>  </td>
+			<td> <a href="tutorial2.html"> Interface </a> </td>
+			<td> <a href="tutorial3.html"> Audio </a> </td>
+			<td> <a href="tutorial4.html"> Camera </a> </td>
+			<td> <a href="tutorial5.html"> Timed Events </a> </td>
+			<td> <a href="tutorial6.html"> Periodic Events </a> </td>
+			<td> <a href="tutorial7.html"> Composition </a> </td>
+		</tr>
+	</table>
+</div>
+
+<h1> Hello Accessors! </h1>
+<div class="description"> <p> <b> Accessors </b> are a technology for making IoT accessible through 
+open interfaces, an open developer community, and an open repository.  </p>
+<p> Accessors are <b> actors</b>.  Actors are software 
+components that react to streaming input events and produce streaming output 
+events.  Accessors wrap a (possibly remote) device or service with an actor interface.
+<p> 
+<b> Compose </b> heterogeneous devices and services quickly and predictably. 
+<b> Write once, run on any </b> capable accessor host (browser, Node.js, Java). </p>
+
+<p>
+Let's start with Hello World.  Here's an accessor that <b>inputs </b> a name 
+and <b> outputs</b> a personalized greeting.  It's instantiated for you.  Inputs 
+and outputs are listed in the table below.
+</p>
+<p> Type your name in the 'name' input field and click 'react to inputs'. 
+ </div>
+ 
+ <div class="success" id="success">  
+ 	<span id="successMessage"> &nbsp; </span>
+ 	<button class="tutorialButton" id="nextButton" onclick="location.href='tutorial2.html'"> Interface -&gt;</button>
+ </div>
+
+<div class="codebox">
+	<textarea id="code" rows="10" cols="50">
+/** An accessor that outputs Hello, name.
+* @accessor tutorial/Hello
+* @input name The user's name.
+* @output greeting Hello, name .
+*/
+
+exports.setup = function() {
+   this.input('name');
+   this.output('greeting');
+}
+
+exports.initialize = function() {
+	this.addInputHandler('name', function() {
+		this.send('greeting', 'Hello, ' + this.get('name'));
+	});
+}
+	</textarea>
+	<div class="errorMessage" id="errorMessage">
+	</div>
+</div>
+
+<div id="resultbox">
+	<div> <button type="button" id="button" class="accessorButton ui-btn ui-corner-all" style="margin-top:1em;margin-bottom:0.5em;"> Instantiate </button>
+	</div>
+	<hr>
+	<div id="accessorbox">
+		
+	</div>
+</div>
+	
+</body>
+</html>

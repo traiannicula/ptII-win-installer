@@ -1,0 +1,16 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim and Edward A. Lee, Contributor: Christopher Brooks">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;This accessor sends UDP (datagram) messages to the specified&#10; destination address and port.&lt;/p&gt;&#10;&lt;p&gt; The send type can be any of those supported by the host.  The list&#10; of supported types will be provided as options for the &lt;code&gt;sendType&lt;/code&gt;&#10; parameter. For the Ptolemy II host, these include at least&#10; &apos;string&apos;, &apos;number&apos;, &apos;image&apos;, and a variety of numeric types.&lt;/p&gt;&#10;&lt;p&gt; Note that UDP, unlike TCP, has the notion of a &amp;quot;message&amp;quot; (a&#10; datagram). A message can contain more than one byte.  The&#10; &lt;code&gt;receiveType&lt;/code&gt; determines the type of the elements sent&#10; by this accessor&lt;/p&gt;">
+    </property>
+    <property name="toSend (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The message to send.">
+    </property>
+    <property name="destinationAddress (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The host name or IP address to send to.&#10;  This defaults to &quot;localhost&quot;.">
+    </property>
+    <property name="destinationPort (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The port to send to.&#10;  This defaults to 8084.">
+    </property>
+    <property name="sendType (parameter)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="See above.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

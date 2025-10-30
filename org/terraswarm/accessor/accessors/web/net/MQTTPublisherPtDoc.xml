@@ -1,0 +1,14 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Hokeun Kim, contributor: Christopher Brooks">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Publish MQTT protocol messages.&lt;/p&gt;&#10;&lt;p&gt; MQTT is a lightweight messaging protocol.&#10; This accessor requires the &apos;mqtt&apos; module.&lt;/p&gt;">
+    </property>
+    <property name="toPublish (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The data to be published.">
+    </property>
+    <property name="connection (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Output on which a string is sent when a&#10;  connection to the broker has been established.">
+    </property>
+    <property name="topic (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="Output indicating the topic of received data.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>

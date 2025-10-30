@@ -1,0 +1,28 @@
+<property name="documentation" class="ptolemy.vergil.basic.DocAttribute">
+    <property name="author" class="ptolemy.kernel.util.StringAttribute" value="Christopher Brooks, based on KeyValueStore by Edward A. Lee and LocalStorage demo by Hokeun Kim.">
+    </property>
+    <property name="description" class="ptolemy.kernel.util.StringAttribute" value="&lt;p&gt;Save and retrieve a value from local storage.&lt;/p&gt;">
+    </property>
+    <property name="baseDirectory (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The directory in which to store the data&#10; If there is no value used, then the default value is /tmp/LocalStorage&lt;Random&gt;&#10; where &lt;Random&gt; is a random number.">
+    </property>
+    <property name="storeLocation (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The URL of the key-value store service.&#10; The storeLocation is converted into a legal filename via substitution">
+    </property>
+    <property name="key (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The key to be updated or retrieved.">
+    </property>
+    <property name="list (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="If true, then generate a list of all the&#10; keys and values on the result.">
+    </property>
+    <property name="remove (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="If true, then remove the key from the store;&#10;  otherwise, retrieve the value for the key.">
+    </property>
+    <property name="value (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The value to store in the key-value store,&#10;  or empty to not store anything.">
+    </property>
+    <property name="trigger (port)" class="ptolemy.kernel.util.StringAttribute" type="undefined" value="The trigger input.">
+    </property>
+    <property name="notFound (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="True if the key was not found.">
+    </property>
+    <property name="result (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="The value retrieved from or written to&#10;  the key-value store.">
+    </property>
+    <property name="debug (port)" class="ptolemy.kernel.util.StringAttribute" type="[object Object]" value="Debug messages.">
+    </property>
+    <property name="version" class="ptolemy.kernel.util.StringAttribute" value="$$Id$$">
+    </property>
+</property>
