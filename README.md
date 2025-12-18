@@ -66,10 +66,3 @@ jpackage ^
   --java-options "-Djava.awt.headless=false"
 ```
 
-The following JVM options ensure the application respects the HiDPI scaling factor:
-
-```java
--Dsun.java2d.uiScale.enabled=true
--Dsun.java2d.uiScale=1.3
--Djava.awt.headless=false
-```
