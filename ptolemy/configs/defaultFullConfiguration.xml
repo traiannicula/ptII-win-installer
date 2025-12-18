@@ -158,7 +158,22 @@
 
     <!-- Optional packages that may or may not be present  -->
     <!-- Alphabetize these  -->
- 
+     <entity name="MoreLibraries" class="ptolemy.moml.EntityLibrary">
+      <configure>
+        <?moml
+          <group>
+            <input source="ptolemy/vergil/actor/lib/interactive.xml"/>
+	    <!-- matlab depends on Matlab being present -->
+            <input source="ptolemy/matlab/matlab.xml"/>
+            <input source="ptolemy/actor/lib/python/python.xml"/>
+            <input source="ptolemy/actor/lib/test.xml"/>
+            <input source="ptolemy/actor/lib/security/security.xml"/>
+			<input source="ptolemy/domains/wireless/wireless.xml"/>
+            <input source="ptolemy/actor/lib/xslt/xslt.xml"/>
+          </group>
+        ?>
+      </configure>
+    </entity>
 
   </entity>
 </group>

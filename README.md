@@ -63,8 +63,6 @@ jpackage ^
   --app-version 11.1 ^
   --copyright "Copyright (c) 1995-2021 The Regents of the University of California" ^
   --description "Ptolemy II is an open-source software framework supporting experimentation with actor-oriented design"
-  --java-options "-Dsun.java2d.uiScale.enabled=true" ^
-  --java-options "-Dsun.java2d.uiScale=1.3" ^
   --java-options "-Djava.awt.headless=false"
 ```
 
