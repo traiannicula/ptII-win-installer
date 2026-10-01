@@ -4,7 +4,7 @@
 
 I personally enjoy working with Ptolemy II and use it extensively during my modeling and simulation classes.
 
-This repository is a **fork of the official [Ptolemy II repository](https://github.com/icyphy/ptII)**, with the goal of creating and sharing a **modern Windows MSI installer** that leverages newer versions of Java. The codebase remains unchanged, with a few minimal adjustments described below. Only basic actors are included into this distribution. I have not managed to make CapeCode actors with TerraSwarm accessors library work from a uber jar.
+This repository is a **fork of the official [Ptolemy II repository](https://github.com/icyphy/ptII)**, with the goal of creating and sharing a **modern Windows MSI installer** that leverages newer versions of Java. The codebase remains unchanged, with a few minimal adjustments described below. 
 
 > ✅ **Download the Installer**:  
 > 👉 [PtolemyII-11.1.msi](https://github.com/traiannicula/ptII-win-installer/releases/download/v1.0.0/PtolemyII-11.1.msi)
@@ -49,20 +49,23 @@ Followed steps 3–5 from the Ptolemy II Eclipse setup guide:
 ### 6. Built the Installer with `jpackage`
 
 ```bash
-jpackage ^
-  --type msi ^
-  --name "PtolemyII" ^
-  --input installer/app ^
-  --main-jar ptII.jar ^
-  --main-class ptolemy.vergil.VergilApplication ^
-  --icon installer/icon/ptiny.ico ^
-  --win-shortcut ^
-  --win-menu ^
-  --win-dir-chooser ^
-  --win-menu-group "Ptolemy II" ^
-  --app-version 11.1 ^
-  --copyright "Copyright (c) 1995-2021 The Regents of the University of California" ^
-  --description "Ptolemy II is an open-source software framework supporting experimentation with actor-oriented design"
-  --java-options "-Djava.awt.headless=false"
+jpackage \
+  --type msi \
+  --name "PtolemyII" \
+  --input installer/app \
+  --main-jar ptII-launcher.jar \
+  --main-class ptolemy.vergil.VergilApplication \
+  --icon installer/icon/ptiny.ico \
+  --win-shortcut \
+  --win-menu \
+  --win-dir-chooser \
+  --win-menu-group "Ptolemy II" \
+  --app-version 11.1 \
+  --copyright "Copyright (c) 1995-2021 The Regents of the University of California" \
+  --description "Ptolemy II is an open-source software framework supporting experimentation with actor-oriented design" \
+  --java-options "-Djava.awt.headless=false" \
+  --java-options "-XX:+ShowCodeDetailsInExceptionMessages" \
+  --java-options "-cp \$APPDIR/classes;\$APPDIR/lib/*;\$APPDIR/ptolemy/actor/lib/excel/jxl.jar;\$APPDIR/ptolemy/distributed/jini/jar/*;\$APPDIR/ptolemy/domains/ptinyos/lib/*;\$APPDIR/ptolemy/actor/ptalon/antlr/antlr.jar" \
+  --java-options "--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED"
 ```
 
