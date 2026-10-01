@@ -40,7 +40,26 @@ Followed steps 3–5 from the Ptolemy II Eclipse setup guide:
 
 ### 4. Packaged Application
 
-- Used Eclipse to create a **fat (uber) JAR** with `ptolemy.vergil.VergilApplication` as the main class
+1. **Create a folder named `lib`** inside `installer/app/` and copy all the `.jar` files from your library path into it (everything you had in `D:\dev\projects\ptII-win-installer\lib\`).
+2. **Create a subfolder named `classes`** inside `installer/app/` and copy all the compiled code from your `output` folder there (the `ptolemy/`, `org/`, etc. directories, along with their resources like `.js`, `.xml` files, or icons).
+3. **Copy the specific internal dependency folders**, maintaining their relative paths inside `installer/app/`. For example:
+   * `installer/app/ptolemy/actor/lib/excel/jxl.jar`
+   * `installer/app/ptolemy/distributed/jini/jar/...`
+   * `installer/app/ptolemy/domains/ptinyos/lib/...`
+   * `installer/app/ptolemy/actor/ptalon/antlr/antlr.jar`
+4. **Create a "Dummy JAR" (empty JAR file)**. By design, `jpackage` forces you to specify a `--main-jar`. The solution is to create a tiny JAR (for instance, an empty text file renamed to `ptII-launcher.jar` or quickly generated via the console) and place it directly in the root of `installer/app/`. It serves solely as a launcher trigger.
+
+The final structure inside your `installer/app` folder should look like this:
+
+installer/app/
+├── ptII-launcher.jar   <-- (Dummy/empty JAR file)
+├── classes/            <-- (Your compiled 'output' folder containing ptolemy/, etc.)
+├── lib/                <-- (All the ~60 JARs from the general lib folder)
+└── ptolemy/            <-- (Structure with specific subfolders for jxl, jini, nesc, antlr)
+    ├── actor/
+    ├── distributed/
+    └── domains/
+
 
 ### 5. WiX Toolset Installation
 
